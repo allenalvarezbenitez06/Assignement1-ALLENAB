@@ -1,5 +1,9 @@
 /* LA H 513 Soccer Club */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -14,6 +18,7 @@ body {
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #111827;
     color: white;
@@ -84,7 +89,7 @@ section {
 }
 
 
-/* Welcome */
+/* Welcome Section */
 
 .welcome {
     background-color: white;
@@ -92,7 +97,7 @@ section {
 }
 
 
-/* Goal */
+/* Goal Section */
 
 .goal {
     background-color: #111827;
@@ -104,7 +109,7 @@ section {
 }
 
 
-/* Team */
+/* Team Section */
 
 .team {
     background-color: white;
@@ -124,7 +129,7 @@ main p {
 }
 
 
-/* Main/Home Picture */
+/* Home Pictures */
 
 main > img,
 .main-picture,
@@ -157,6 +162,20 @@ main > img,
     object-fit: cover;
     border: 4px solid #111827;
     border-radius: 10px;
+}
+
+
+/* Contact Links */
+
+main a {
+    color: #1565c0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #2196f3;
+    text-decoration: underline;
 }
 
 
