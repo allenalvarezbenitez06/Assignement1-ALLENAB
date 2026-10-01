@@ -1,64 +1,198 @@
+```css
+/* =========================================
+   LA H 513 SOCCER CLUB
+   Assignment 2 - CSS Styling
+   ========================================= */
+
 /* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #f2f2f2;
-    color: #333;
+* {
+    box-sizing: border-box;
 }
 
-/* Header */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+    color: #222;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: #222;
+    background: linear-gradient(135deg, #063b1c, #087f3d, #11a957);
     color: white;
-    padding: 15px 0;
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px 10px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
     z-index: 1000;
+    border-bottom: 4px solid #f7c600;
 }
 
-/* Navigation */
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    margin: 5px 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #f7c600;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 nav a {
     color: white;
+    background-color: rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    margin: 0 15px;
+    padding: 10px 22px;
+    border-radius: 25px;
     font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 nav a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
+    background-color: #f7c600;
+    color: #063b1c;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Main Content */
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
 main {
-    min-height: 80vh;
+    min-height: 85vh;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 230px 30px 60px;
+
+    /* Flexbox requirement */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
-    margin: 100px auto 0;
-    padding: 30px;
+
     text-align: center;
 }
 
-/* Images */
+/* Main Headings */
+main h2 {
+    color: #087f3d;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #f7c600;
+    padding-bottom: 5px;
+}
+
+main p {
+    max-width: 750px;
+    font-size: 18px;
+    color: #444;
+}
+
+/* =========================================
+   SOCCER IMAGE
+   ========================================= */
+
 main img {
     max-width: 500px;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    margin: 25px 0;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+main img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   CONTENT SECTIONS
+   ========================================= */
+
+main h2:nth-of-type(2) {
     margin-top: 30px;
 }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: linear-gradient(135deg, #063b1c, #087f3d);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 4px solid #f7c600;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 210px 20px 40px;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+}
+```
