@@ -90,55 +90,14 @@ main {
     max-width: 900px;
     margin: auto;
     padding: 220px 30px 50px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
 }
 
 
-/* SECTIONS */
-
-section {
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px #bbb;
-}
-
-
-/* WELCOME SECTION */
-
-.welcome {
-    background-color: white;
-    border-top: 6px solid #2196f3;
-}
-
-
-/* GOAL SECTION */
-
-.goal {
-    background-color: #111827;
-    color: white;
-}
-
-.goal h2 {
-    color: #2196f3;
-}
-
-
-/* TEAM SECTION */
-
-.team {
-    background-color: white;
-    border-top: 6px solid #2196f3;
-}
-
-
-/* HEADINGS */
+/* HEADINGS AND PARAGRAPHS */
 
 main h2 {
     color: #1565c0;
@@ -152,9 +111,7 @@ main p {
 
 /* HOME PICTURES */
 
-main > img,
-.main-picture,
-.welcome img {
+.main-picture {
     width: 350px;
     height: 250px;
     max-width: 100%;
@@ -167,36 +124,20 @@ main > img,
 
 /* TEAM PICTURES */
 
-.pictures,
-.team-pictures {
+.pictures {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-.pictures img,
-.team-pictures img {
+.pictures img {
     width: 250px;
     height: 180px;
     max-width: 100%;
     object-fit: cover;
     border: 4px solid #111827;
     border-radius: 10px;
-}
-
-
-/* CONTACT LINKS */
-
-main a {
-    color: #1565c0;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-main a:hover {
-    color: #2196f3;
-    text-decoration: underline;
 }
 
 
@@ -208,17 +149,19 @@ main a:hover {
     margin: 30px auto;
     padding: 25px;
     background-color: white;
+    color: #222;
     border-radius: 15px;
     box-shadow: 0 4px 12px #bbb;
 }
 
 .faq h2 {
     color: #1565c0;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .faq-item {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .faq-question {
@@ -232,10 +175,17 @@ main a:hover {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .faq-question:hover {
     background-color: #2196f3;
+}
+
+.faq-arrow {
+    margin-left: 10px;
 }
 
 .faq-answer {
@@ -247,6 +197,8 @@ main a:hover {
     border-radius: 5px;
     text-align: left;
 }
+
+/* Show answer when question is clicked */
 
 .faq-item.active .faq-answer {
     display: block;
@@ -263,6 +215,10 @@ footer {
     border-top: 5px solid #2196f3;
 }
 
+footer p {
+    color: white;
+}
+
 
 /* DARK MODE */
 
@@ -275,7 +231,7 @@ body.dark-mode main {
     background-color: #121212;
 }
 
-body.dark-mode h2 {
+body.dark-mode main h2 {
     color: #64b5f6;
 }
 
@@ -288,8 +244,6 @@ body.dark-mode footer {
     background-color: #080e1c;
 }
 
-body.dark-mode .welcome,
-body.dark-mode .team,
 body.dark-mode .faq {
     background-color: #222;
     color: white;
@@ -305,9 +259,13 @@ body.dark-mode .faq-answer {
     color: white;
 }
 
-body.dark-mode .goal {
-    background-color: #080e1c;
+body.dark-mode .faq-question {
+    background-color: #1565c0;
     color: white;
+}
+
+body.dark-mode .faq-question:hover {
+    background-color: #2196f3;
 }
 
 
@@ -329,22 +287,26 @@ body.dark-mode .goal {
     }
 
     nav a {
+        display: inline-block;
         margin: 3px;
         padding: 6px;
     }
 
-    main {
-        padding: 210px 15px 30px;
+    #themeToggle {
+        display: block;
+        margin: 10px auto;
     }
 
-    main > img,
+    main {
+        padding: 240px 15px 30px;
+    }
+
     .main-picture {
         width: 100%;
         height: auto;
     }
 
-    .pictures img,
-    .team-pictures img {
+    .pictures img {
         width: 100%;
         height: auto;
     }
@@ -353,124 +315,4 @@ body.dark-mode .goal {
         padding: 15px;
     }
 
-    #themeToggle {
-        display: block;
-        margin: 10px auto;
-    }
-
-}
-
-/* DARK MODE FEATURE */
-
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode header {
-    background-color: #080e1c;
-    color: white;
-}
-
-body.dark-mode main {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode h2,
-body.dark-mode p {
-    color: white;
-}
-
-body.dark-mode footer {
-    background-color: #080e1c;
-    color: white;
-}
-
-body.dark-mode .faq {
-    background-color: #222;
-    color: white;
-}
-
-body.dark-mode .faq h2 {
-    color: #2196f3;
-}
-
-body.dark-mode .faq-answer {
-    background-color: #333;
-    color: white;
-}
-
-body.dark-mode .faq-question {
-    background-color: #1565c0;
-    color: white;
-}
-
-/* Dark Mode Button */
-
-#themeToggle {
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-#themeToggle:hover {
-    background-color: #1565c0;
-}
-
-/* FAQ QUESTIONS FEATURE */
-
-.faq {
-    width: 100%;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: white;
-    color: #222;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #bbb;
-}
-
-.faq h2 {
-    color: #1565c0;
-    text-align: center;
-}
-
-.faq-item {
-    margin-bottom: 12px;
-}
-
-.faq-question {
-    width: 100%;
-    padding: 15px;
-    background-color: #142b50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-align: left;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.faq-question:hover {
-    background-color: #2196f3;
-}
-
-.faq-answer {
-    display: none;
-    padding: 15px;
-    margin: 0;
-    background-color: #eeeeee;
-    color: #111;
-    text-align: left;
-    border-radius: 5px;
-}
-
-/* Show answer when clicked */
-
-.faq-item.active .faq-answer {
-    display: block;
 }
