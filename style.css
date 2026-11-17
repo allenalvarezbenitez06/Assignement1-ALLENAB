@@ -188,3 +188,53 @@ footer {
     padding: 20px;
     border-top: 5px solid #2196f3;
 }
+body {
+    background-color: white;
+    color: #111;
+    transition: 0.3s;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+body.dark-mode section,
+body.dark-mode .card {
+    background-color: #222;
+    color: white;
+}
+
+#themeToggle {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.faq {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #142b50;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #eeeeee;
+    color: #111;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
