@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +9,16 @@
     <title>LA H 513 Soccer Club</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <header>
 
-        <img src="la h logo.jpg" alt="LA H 513 Soccer Club logo" class="logo">
+        <img src="la h logo.jpg"
+             alt="LA H 513 Soccer Club logo"
+             class="logo">
 
         <h1>LA H 513 Soccer Club</h1>
 
@@ -25,8 +29,9 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
 
-            <!-- Dark Mode Button -->
-            <button id="themeToggle">🌙 Dark Mode</button>
+            <button id="themeToggle" type="button">
+                🌙 Dark Mode
+            </button>
         </nav>
 
     </header>
@@ -63,42 +68,55 @@
 
         </div>
 
-        <!-- FAQ Section -->
+        <!-- INTERACTIVE FAQ SECTION -->
+
         <section class="faq">
 
             <h2>Frequently Asked Questions</h2>
 
             <div class="faq-item">
-                <button class="faq-question">
+
+                <button class="faq-question" type="button"
+                        aria-expanded="false">
                     What is LA H 513?
+                    <span class="faq-arrow">▼</span>
                 </button>
 
                 <p class="faq-answer">
                     LA H 513 is a soccer program focused on helping
                     players improve their skills and compete.
                 </p>
+
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+
+                <button class="faq-question" type="button"
+                        aria-expanded="false">
                     What ages can participate?
+                    <span class="faq-arrow">▼</span>
                 </button>
 
                 <p class="faq-answer">
                     Our program offers opportunities for different
                     youth age groups.
                 </p>
+
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+
+                <button class="faq-question" type="button"
+                        aria-expanded="false">
                     How can I join the team?
+                    <span class="faq-arrow">▼</span>
                 </button>
 
                 <p class="faq-answer">
                     Contact us to learn about upcoming tryouts and
                     registration opportunities.
                 </p>
+
             </div>
 
         </section>
@@ -111,9 +129,5 @@
 
     </footer>
 
-    <!-- Connect JavaScript -->
-    <script src="script.js"></script>
-
 </body>
 </html>
-<button id="themeToggle">🌙 Dark Mode</button>
