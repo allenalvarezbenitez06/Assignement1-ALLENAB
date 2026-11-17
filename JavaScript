@@ -9,3 +9,18 @@ themeToggle.addEventListener("click", function() {
         themeToggle.textContent = "🌙 Dark Mode";
     }
 });
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(function(question) {
+    question.addEventListener("click", function() {
+        const faqItem = question.parentElement;
+
+        faqItem.classList.toggle("active");
+
+        if (faqItem.classList.contains("active")) {
+            question.textContent = "▼ " + question.textContent.replace("▼ ", "");
+        } else {
+            question.textContent = question.textContent.replace("▼ ", "");
+        }
+    });
+});
