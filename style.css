@@ -1,4 +1,5 @@
-/* LA H 513 Soccer Club */
+
+/* LA H 513 SOCCER CLUB */
 
 * {
     box-sizing: border-box;
@@ -10,10 +11,11 @@ body {
     margin: 0;
     background-color: white;
     color: #222;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 
-/* Header */
+/* HEADER */
 
 header {
     position: fixed;
@@ -41,10 +43,11 @@ header h1 {
 
 header p {
     margin: 5px;
+    color: white;
 }
 
 
-/* Navigation */
+/* NAVIGATION */
 
 nav {
     margin-top: 15px;
@@ -63,7 +66,25 @@ nav a:hover {
 }
 
 
-/* Main */
+/* DARK MODE BUTTON */
+
+#themeToggle {
+    padding: 9px 14px;
+    margin: 8px;
+    cursor: pointer;
+    border: 1px solid #2196f3;
+    border-radius: 6px;
+    background-color: #2196f3;
+    color: white;
+    font-weight: bold;
+}
+
+#themeToggle:hover {
+    background-color: #1565c0;
+}
+
+
+/* MAIN CONTENT */
 
 main {
     max-width: 900px;
@@ -78,7 +99,7 @@ main {
 }
 
 
-/* Sections */
+/* SECTIONS */
 
 section {
     width: 100%;
@@ -89,7 +110,7 @@ section {
 }
 
 
-/* Welcome Section */
+/* WELCOME SECTION */
 
 .welcome {
     background-color: white;
@@ -97,7 +118,7 @@ section {
 }
 
 
-/* Goal Section */
+/* GOAL SECTION */
 
 .goal {
     background-color: #111827;
@@ -109,7 +130,7 @@ section {
 }
 
 
-/* Team Section */
+/* TEAM SECTION */
 
 .team {
     background-color: white;
@@ -117,7 +138,7 @@ section {
 }
 
 
-/* Headings */
+/* HEADINGS */
 
 main h2 {
     color: #1565c0;
@@ -129,7 +150,7 @@ main p {
 }
 
 
-/* Home Pictures */
+/* HOME PICTURES */
 
 main > img,
 .main-picture,
@@ -144,7 +165,7 @@ main > img,
 }
 
 
-/* Team Pictures */
+/* TEAM PICTURES */
 
 .pictures,
 .team-pictures {
@@ -165,7 +186,7 @@ main > img,
 }
 
 
-/* Contact Links */
+/* CONTACT LINKS */
 
 main a {
     color: #1565c0;
@@ -179,41 +200,25 @@ main a:hover {
 }
 
 
-/* Footer */
+/* FAQ SECTION */
 
-footer {
-    background-color: #111827;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-top: 5px solid #2196f3;
-}
-body {
-    background-color: white;
-    color: #111;
-    transition: 0.3s;
-}
-
-body.dark-mode {
-    background-color: #111;
-    color: white;
-}
-
-body.dark-mode section,
-body.dark-mode .card {
-    background-color: #222;
-    color: white;
-}
-
-#themeToggle {
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 6px;
-}
 .faq {
-    padding: 30px;
+    width: 100%;
     max-width: 800px;
-    margin: auto;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #bbb;
+}
+
+.faq h2 {
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
 }
 
 .faq-question {
@@ -222,19 +227,135 @@ body.dark-mode .card {
     background-color: #142b50;
     color: white;
     border: none;
+    border-radius: 5px;
     text-align: left;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px;
+    font-weight: bold;
+}
+
+.faq-question:hover {
+    background-color: #2196f3;
 }
 
 .faq-answer {
     display: none;
     padding: 15px;
+    margin: 0;
     background-color: #eeeeee;
     color: #111;
+    border-radius: 5px;
+    text-align: left;
 }
 
 .faq-item.active .faq-answer {
     display: block;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #2196f3;
+}
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode main {
+    background-color: #121212;
+}
+
+body.dark-mode h2 {
+    color: #64b5f6;
+}
+
+body.dark-mode main p {
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #080e1c;
+}
+
+body.dark-mode .welcome,
+body.dark-mode .team,
+body.dark-mode .faq {
+    background-color: #222;
+    color: white;
+    box-shadow: 0 4px 12px #000;
+}
+
+body.dark-mode .faq h2 {
+    color: #64b5f6;
+}
+
+body.dark-mode .faq-answer {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .goal {
+    background-color: #080e1c;
+    color: white;
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        margin: 3px;
+        padding: 6px;
+    }
+
+    main {
+        padding: 210px 15px 30px;
+    }
+
+    main > img,
+    .main-picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .pictures img,
+    .team-pictures img {
+        width: 100%;
+        height: auto;
+    }
+
+    .faq {
+        padding: 15px;
+    }
+
+    #themeToggle {
+        display: block;
+        margin: 10px auto;
+    }
+
 }
